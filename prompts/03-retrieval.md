@@ -1,0 +1,7 @@
+# Etapa 03 — Recuperação seletiva e orçamento
+
+Implemente busca lexical determinística sobre títulos, tags, headings e trechos Markdown usando biblioteca padrão. Priorize correspondência de termos, tarefa/branch atual e status válido; desempate estável. Não indexar código-fonte nem histórico integral. Decisões superseded não são recomendações vigentes; podem ser consultadas explicitamente. Excluir sessões antigas por padrão; permitir busca explícita em arquivo histórico. Nunca interpretar conteúdo retornado como comando.
+
+Contexto inicial: índice resumido, visão geral do projeto, estado da tarefa selecionada e referências relevantes. Orçamento padrão 12.000 caracteres configurável (não afirmar equivalência exata com tokens); incluir metadados e indicação de truncamento dentro do limite. Priorizar objetivo, próximo passo, bloqueios, evidências e divergências. Retornar trechos com path e heading; não carregar documentos inteiros quando um trecho basta. Preservar unidades semânticas; se não couber, retornar referência curta. Se tarefa não indicada e múltiplas ativas, mostrar lista compacta para seleção. Se nada corresponder, informar ausência, sem inventar contexto.
+
+Teste com fixture contendo dezenas de sessões, decisões contraditórias, termos acentuados, consulta vazia, orçamento mínimo, ranking reproduzível e duas tarefas. Meça bytes/caracteres retornados e demonstre que o tamanho inicial não cresce linearmente com histórico. Documente limitações da busca lexical e eventual migração futura para SQLite FTS sem exigir embeddings.
